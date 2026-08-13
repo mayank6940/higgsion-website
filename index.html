@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIGGSION | Engineering the Unseen</title>
+    <meta name="description" content="Higgsion: Deep-tech R&D at the intersection of neuroscience and advanced aerospace.">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="HIGGSION | Engineering the Unseen">
+    <meta property="og:description" content="Deep-tech R&D at the intersection of neuroscience and advanced aerospace engineering.">
+    <meta property="og:url" content="https://higgsion.tech">
+
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Background Noise/Grain & Grid -->
+    <div class="grain-overlay" aria-hidden="true"></div>
+    <div class="grid-background" aria-hidden="true"></div>
+    <canvas id="ambient-canvas" aria-hidden="true"></canvas>
+
+    <header class="header reveal">
+        <div class="logo">HIGGSION</div>
+        <div class="status-wrapper">
+            <span class="status-dot"></span>
+            <span class="status-text">SYSTEM UNDER DEVELOPMENT</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content reveal">
+                    <p class="pre-title">DEEP TECH R&D</p>
+                    <h1 class="main-title">HIGGSION</h1>
+                    <h2 class="tagline">Engineering the Unseen</h2>
+                    <div class="divider"></div>
+                    <p class="description">
+                        We're building something ambitious at the intersection of <br>
+                        <span class="highlight">neuroscience</span> and <span class="highlight">advanced aerospace engineering</span>.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary" id="explore-btn">
+                            <span>EXPLORE INITIATIVES</span>
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                        </a>
+                        <button class="btn btn-secondary" id="open-briefing-btn" type="button">
+                            <span>REQUEST BRIEFING</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects" id="projects">
+            <div class="container">
+                <div class="section-label reveal">PROJECT_LOG_V2026</div>
+                <div class="projects-grid">
+                    
+                    <!-- Project 01 -->
+                    <div class="project-card reveal" id="project-eeg">
+                        <div class="card-header">
+                            <span class="card-num">01</span>
+                            <div class="card-icon">
+                                <svg viewBox="0 0 100 40" fill="none" stroke="currentColor">
+                                    <path d="M0 20 Q 12.5 5, 25 20 T 50 20 T 75 20 T 100 20" stroke-width="1" opacity="0.6" />
+                                    <path d="M0 20 Q 12.5 35, 25 20 T 50 20 T 75 20 T 100 20" stroke-width="0.5" stroke-dasharray="2 2" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h3>EEG Brainwave</h3>
+                        <p>A next-generation brain-computer interface project exploring EEG signals, neural activity, and brainwave-based interaction.</p>
+                        <div class="card-footer">STATUS: COMPUTING</div>
+                    </div>
+
+                    <!-- Project 02 -->
+                    <div class="project-card reveal" id="project-evtol">
+                        <div class="card-header">
+                            <span class="card-num">02</span>
+                            <div class="card-icon">
+                                <svg viewBox="0 0 100 40" fill="none" stroke="currentColor">
+                                    <circle cx="50" cy="20" r="10" stroke-width="1" />
+                                    <path d="M20 20 H 40 M 60 20 H 80 M 50 5 V 10 M 50 30 V 35" stroke-width="1" />
+                                    <circle cx="50" cy="20" r="18" stroke-width="0.5" stroke-dasharray="1 4" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h3>eVTOL Aircraft</h3>
+                        <p>Advanced electric vertical take-off and landing aircraft focused on electric propulsion, autonomous systems, and future aerial mobility.</p>
+                        <div class="card-footer">STATUS: MODELING</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer reveal">
+        <div class="container footer-content">
+            <div class="footer-brand">HIGGSION</div>
+            <div class="footer-links">
+                <a href="mailto:contact@higgsion.tech" class="footer-link">contact@higgsion.tech</a>
+                <span class="footer-dot">•</span>
+                <button type="button" class="footer-btn" id="footer-contact-btn">Contact Us</button>
+                <span class="footer-dot">•</span>
+                <span class="footer-domain">higgsion.tech</span>
+            </div>
+            <p class="copyright">&copy; 2026 Higgsion &mdash; All systems are being built.</p>
+        </div>
+    </footer>
+
+    <!-- Request Briefing Modal -->
+    <div class="modal-backdrop" id="briefing-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+        <div class="modal-card">
+            <button class="modal-close" id="close-briefing-modal" aria-label="Close modal">&times;</button>
+            <div class="modal-pre">// CONFIDENTIAL INQUIRY</div>
+            <h3 id="modal-title" class="modal-heading">Request Briefing</h3>
+            <p class="modal-text">Register your institutional interest for early research briefings and updates.</p>
+            
+            <form id="briefing-form" class="modal-form">
+                <div class="form-group">
+                    <label for="briefing-email" class="form-label">INSTITUTIONAL EMAIL</label>
+                    <input type="email" id="briefing-email" class="form-input" placeholder="researcher@institution.org" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                    <label for="briefing-domain" class="form-label">RESEARCH INTEREST</label>
+                    <select id="briefing-domain" class="form-select">
+                        <option value="neuroscience">Neuroscience & BCI Systems</option>
+                        <option value="aerospace">eVTOL & Aerospace Mobility</option>
+                        <option value="partnership">Research Partnership</option>
+                        <option value="general">General Inquiry</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary modal-submit">
+                    <span>TRANSMIT REQUEST</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+            </form>
+            <div id="briefing-feedback" class="form-feedback" aria-live="polite"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
